@@ -1,0 +1,13 @@
+{
+  "name": "abis",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "tailwind": "tailwindcss -i ./public/css/main.css -o ./public/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.0.0",
+    "vite": "^5.0.0"
+  }
+}
