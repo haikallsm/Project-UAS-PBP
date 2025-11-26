@@ -1,22 +1,25 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
+import tailwindcss from "tailwindcss";
 
 export default defineConfig({
-  root: ".",
+  css: {
+    transformers: {
+      lightningcss: {
+        drafts: {
+          nesting: true,
+          customMedia: true,
+        },
+        minify: false,
+      },
+    },
+    postcss: {
+      plugins: [tailwindcss()],
+    },
+  },
   build: {
     outDir: "public",
-    emptyOutDir: false,
     rollupOptions: {
-      input: resolve(__dirname, "assets/js/main.js"),
-      output: {
-        entryFileNames: "js/app.js",
-        assetFileNames: ({ name }) => {
-          if (name && name.endsWith(".css")) {
-            return "css/style.css";
-          }
-          return "assets/[name].[ext]";
-        },
-      },
+      input: "assets/css/input.css",
     },
   },
 });
