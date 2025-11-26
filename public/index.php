@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/../vendor/autoload.php';
 
-use App\Core\Router;
+require '../src/Core/Router.php';
 
-$router = new Router();
-$router->run();
+$url = $_GET['url'] ?? '';
+
+Router::route($url);
