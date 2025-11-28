@@ -1,13 +1,31 @@
 {
-  "name": "abis",
-  "private": true,
+  "name": "projectuaspbp",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
-    "build": "vite build",
-    "tailwind": "tailwindcss -i ./public/css/main.css -o ./public/css/styles.css --watch"
+    "build": "vite build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haikallsm/Project-UAS-PBP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haikallsm/Project-UAS-PBP/issues"
+  },
+  "homepage": "https://github.com/haikallsm/Project-UAS-PBP#readme",
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "@tailwindcss/vite": "^4.0.0-alpha.25",
+    "autoprefixer": "^10.4.22",
     "tailwindcss": "^4.0.0",
-    "vite": "^5.0.0"
+    "vite": "^7.2.4",
+    "vite-plugin-php": "^2.0.4"
   }
 }

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?? 'Digital Village' ?></title>
-    <!-- TailwindCSS CDN (Replace with compiled CSS for production) -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="<?= asset_url('css/main.css') ?>">
+    <script type="module" src="<?= asset_url('js/main.js') ?>"></script>
+
 </head>
 <body class="bg-gray-50">
     <nav class="bg-white shadow-lg border-b border-gray-200">
@@ -17,7 +17,7 @@
                         <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
                         </svg>
-                        <span class="ml-2 text-xl font-bold text-gray-900">Digital Village</span>
+                        <span class="ml-2 text-xl font-bold text-gray-900">Digital village</span>
                     </a>
                 </div>
                 <div class="flex items-center space-x-4">

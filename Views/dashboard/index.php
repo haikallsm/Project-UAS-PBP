@@ -6,7 +6,7 @@
   <title>Dashboard e-Desa</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="/public/css/style.css" rel="stylesheet">
+  <link href="css/app.css" rel="stylesheet">
   
 </head>
 
@@ -94,7 +94,7 @@
   </table>
 </div>
 
-<script src="/public/js/dashboard.js"></script>
+<script src="js/dashboard.js"></script>
 
 </body>
 </html>

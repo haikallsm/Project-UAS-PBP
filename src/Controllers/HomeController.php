@@ -1,8 +1,12 @@
 <?php
+
 namespace App\Controllers;
 
 class HomeController {
     public function index() {
-        require __DIR__ . '/../Views/home/index.php';
+        require_once __DIR__ . '/../../config/app.php';
+        
+        $title = "Welcome to Digital Village";
+        require_once __DIR__ . '/../../Views/home/index.php';
     }
 }

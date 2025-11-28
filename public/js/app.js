@@ -1,1 +1,1 @@
-console.log("js loaded");
+console.log("Vite + Tailwind v4 running");

@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@source "../**/*.php";
+@source "../../views/**/*.php";
+@source "../../src/**/*.php";
+@source "../js/**/*.js";
+
+/* Custom variables */
+:root {
+    --brand: #f7d96f;
+    --cream: #fffceb;
+    --accent: #fff7d1;
+    --accent-border: #f0e4b2;
+}
+
+/* Custom styles */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom components */
+@layer components {
+    .btn-brand {
+        @apply bg-[#f7d96f] hover:bg-[#f5d04f] text-black font-bold py-2 px-4 rounded transition duration-200;
+    }
+    
+    .btn-primary {
+        @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-200;
+    }
+    
+    .card {
+        @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
+    }
+    
+    .form-input {
+        @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+    }
+}
+
+/* Custom utilities */
+@layer utilities {
+    .text-brand {
+        color: var(--brand);
+    }
+    
+    .bg-cream {
+        background-color: var(--cream);
+    }
+}

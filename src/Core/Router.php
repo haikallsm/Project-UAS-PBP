@@ -1,21 +1,36 @@
 <?php
 
+namespace App\Core;
+
 class Router {
-    public static function route($url)
-    {
-        switch ($url) {
-            case '':
-            case '/':
-                require __DIR__ . '/../../Views/auth/login.php';
-                break;
+    private $routes = [];
 
-            case 'login':
-                require __DIR__ . '/../../Views/auth/login.php';
-                break;
+    public function get($path, $callback) {
+        $this->routes['GET'][$path] = $callback;
+    }
 
-            default:
-                require __DIR__ . '/../../Views/errors/404.php';
-                break;
+    public function post($path, $callback) {
+        $this->routes['POST'][$path] = $callback;
+    }
+
+    public function resolve() {
+        $method = $_SERVER['REQUEST_METHOD'];
+        $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+        $callback = $this->routes[$method][$path] ?? null;
+
+        if ($callback === null) {
+            http_response_code(404);
+            echo "404 - Page Not Found";
+            return;
+        }
+
+        if (is_array($callback)) {
+            $controller = new $callback[0]();
+            $method = $callback[1];
+            call_user_func([$controller, $method]);
+        } else {
+            call_user_func($callback);
         }
     }
 }

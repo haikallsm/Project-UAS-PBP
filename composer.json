@@ -14,5 +14,10 @@
     },
     "require-dev": {
         "symfony/var-dumper": "^6.3"
+    },
+    "scripts": {
+        "dev": "php -S localhost:8000 -t public & npm run dev",
+        "build": "npm run build",
+        "start": "php -S localhost:8000 -t public"
     }
 }

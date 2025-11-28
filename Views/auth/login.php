@@ -6,8 +6,8 @@
   <title>Login — e-Desa</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="/public/css/style.css" rel="stylesheet">
-
+  <link href="css/app.css" rel="stylesheet">
+  <?php include __DIR__ . '/../layouts/header.php'; ?>
 </head>
 
 <body class="bg-cream min-h-screen flex items-center justify-center font-poppins">
@@ -55,6 +55,8 @@
       </div>
     </div>
   </div>
+
+  <?php include __DIR__ . '/../layouts/footer.php'; ?>
 
   <script src="/public/js/app.js"></script>
 
